@@ -1,0 +1,506 @@
+
+* {
+  box-sizing: border-box;
+}
+
+
+
+
+
+
+/* MAIN APPLICATION BACKGROUND */
+html,
+body {
+  background-color: #454950 !important;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+}
+
+/* ROOT APPLICATION */
+#root {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #454950;
+}
+
+/* DASHBOARD BACKGROUND */
+.dashboard-container {
+  width: 100%;
+  max-width: none;
+  min-height: 100vh;
+  margin: 0;
+  padding: 25px;
+  box-sizing: border-box;
+  background-color: #babdc2;
+}
+
+/* COLLECTIONS PANEL */
+.collections-container {
+  background-color: #ffffff;
+  border-radius: 12px;
+}
+
+/* STATISTICS CARDS */
+.stat-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+}
+
+/* DASHBOARD HEADINGS */
+h1,
+h2 {
+  color: #336597;
+}
+
+
+
+
+
+
+
+
+
+
+
+html,
+body,
+#root {
+  width: 100%;
+  min-width: 0;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  color:rgb(1, 31, 70);
+}
+
+body {
+  overflow-x: hidden;
+}
+
+#root {
+  max-width: none;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+
+
+
+
+.dashboard-container {
+  width: 100%;
+  max-width: none;
+  min-height: 100vh;
+  margin: 0;
+  padding: 25px;
+  box-sizing: border-box;
+}
+
+/* Dashboard statistics */
+.stats-container {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 18px;
+  width: 100%;
+}
+
+/* Database collections panel */
+.collections-container {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 1000px) {
+  .stats-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .stats-container {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-container {
+    padding: 12px;
+  }
+}
+
+
+
+
+.app {
+  padding: 25px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+header h1{
+  margin: 0;
+  color: #eff1f3;
+}
+
+header p {
+  color: #718096;
+}
+
+.connected {
+  color: #159447;
+  font-weight: bold;
+}
+
+.disconnected {
+  color: #d62828;
+  font-weight: bold;
+}
+
+.statistics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 18px;
+  margin-bottom: 30px;
+}
+
+.stat-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px #0000000c;
+}
+
+.stat-card h3 {
+  color: #68788a;
+  font-size: 14px;
+}
+
+.stat-card h1 {
+  color: #1769aa;
+  font-size: 30px;
+}
+
+.database-section {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 15px;
+}
+
+.toolbar h2 {
+  margin-right: auto;
+  color:#1769aa;
+}
+
+.mg{
+  margin-top: 20px;
+  color:white
+}
+
+select, button {
+  padding: 11px 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+button {
+  background: #1769aa;
+  color: white;
+  cursor: pointer;
+  border: none;
+}
+
+.table-container {
+  overflow-x: auto;
+  margin-top: 20px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  white-space: nowrap;
+}
+
+th, td {
+  padding: 13px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+
+th {
+  background: #edf3f8;
+  color: #173b5e;
+}
+
+
+
+
+
+/* TABLE WRAPPER */
+.table-wrapper {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+/* RESPONSIVE TABLE */
+.main-table {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  table-layout: fixed;
+  border-collapse: separate;
+  border-spacing: 0 12px;
+  box-sizing: border-box;
+}
+
+
+/* TABLE HEADINGS */
+.main-table thead th {
+  padding: 14px 10px;
+  text-align: left;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  font-size: 14px;
+}
+
+/* MAIN RECORD CELLS */
+.main-table .main-record td {
+  padding: 15px 10px;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: normal;
+  vertical-align: middle;
+  font-size: 14px;
+  min-width: 0;
+}
+
+/* NESTED DETAILS */
+.main-table .detail-container td {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 10px 14px !important;
+}
+/* TOP CORNERS */
+.record-card .main-record td:first-child {
+  border-radius: 10px 0 0 0;
+}
+
+.record-card .main-record td:last-child {
+  border-radius: 0 10px 0 0;
+}
+
+/* NESTED DETAIL SECTION */
+.record-card .detail-container td {
+  background: #ffffff;
+  padding: 8px 16px 16px !important;
+  border: none;
+}
+
+
+/* BOTTOM CORNERS */
+.record-card .detail-container td {
+  border-radius: 0 0 10px 10px;
+}
+
+/* WHEN A RECORD HAS NO NESTED DATA */
+.record-card .main-record td:first-child:last-child {
+  border-radius: 10px;
+}
+
+/* HOVER EFFECT */
+.record-card:hover {
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.13);
+}
+
+
+/* NESTED CONTENT */
+.record-details,
+.record-details details,
+.nested-content,
+.nested-table,
+.nested-list {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+/* NESTED ROWS */
+.nested-row {
+  display: grid;
+  grid-template-columns: minmax(100px, 25%) minmax(0, 1fr);
+  gap: 12px;
+  width: 100%;
+  min-width: 0;
+}
+
+.nested-label,
+.nested-value {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+
+/* PREVENT LONG VALUES FROM EXPANDING THE TABLE */
+.main-table td,
+.main-table th {
+  overflow-wrap: anywhere;
+  word-wrap: break-word;
+  box-sizing: border-box;
+}
+
+/* EXPANDABLE HEADINGS */
+.record-details summary {
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+
+
+
+/* Nested object rows */
+
+.nested-table {
+  display: flex;
+  flex-direction: column;
+}
+
+.nested-row {
+  display: grid;
+  grid-template-columns: minmax(150px, 25%) 1fr;
+  border-bottom: 1px solid #edf0f3;
+  padding: 10px 5px;
+  gap: 15px;
+}
+
+.nested-row:last-child {
+  border-bottom: none;
+}
+
+.nested-label {
+  font-weight: 600;
+  color: #53677c;
+  text-transform: capitalize;
+}
+
+.nested-value {
+  color: #25384b;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+/* Arrays and individual items */
+
+.nested-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.nested-item {
+  border: 1px solid #e1e8f0;
+  border-radius: 6px;
+  padding: 12px;
+  background: #fafcff;
+}
+
+.nested-item-title {
+  font-weight: 600;
+  color: #1769aa;
+  margin-bottom: 8px;
+}
+
+/* Boolean values */
+
+.boolean-yes {
+  color: #159447;
+  font-weight: 600;
+}
+
+.boolean-no {
+  color: #c0392b;
+  font-weight: 600;
+}
+
+.empty-value {
+  color: #999;
+  font-style: italic;
+}
+
+
+
+
+/* Separate each database record visually */
+.main-table {
+  border-collapse: separate;
+  border-spacing: 0 12px;
+  width: 100%;
+}
+
+/* Main record row */
+.main-table .main-record {
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.2s ease;
+}
+
+/* Rounded top corners */
+.main-table .main-record td:first-child {
+  border-radius: 9px 0 0 0;
+}
+
+/* Rounded right corners */
+.main-table .main-record td:last-child {
+  border-radius: 0 9px 0 0;
+}
+
+/* Hover effect */
+.main-table .main-record:hover {
+  background: #f8fbff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* Nested detail row */
+.main-table .detail-container {
+  background: #f5f8fc;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* Detail row rounded corners */
+.main-table .detail-container > td {
+  border-radius: 0 0 9px 9px;
+  padding: 12px 20px !important;
+}
+
+/* Keep the nested section visually connected */
+.main-table .detail-container {
+  margin-bottom: 8px;
+}
+
+/* Remove unnecessary inner borders */
+.main-table .main-record td {
+  border-bottom: none;
+}
+
+/* Smooth nested section appearance */
+.record-details details {
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+}
